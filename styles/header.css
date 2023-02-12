@@ -1,0 +1,136 @@
+.cabecalho-menu-hamburger {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/Menu.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.cabecalho {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container-img {
+  padding: 1em;
+}
+
+.lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 70vw;
+}
+
+.container-menu:checked ~ .lista-menu {
+  display: block;
+}
+
+.lista-menu-titulo {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.lista-menu-link {
+  background: var(--azul-degrade);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.lista-menu-titulo,
+.lista-menu-item {
+  padding: 1em;
+  background-color: var(--branco);
+}
+
+.container-menu,
+.container-titulo,
+.opcoes,
+.sacola-texto,
+.perfil-texto,
+.card-com-carrossel {
+  display: none;
+}
+
+.container-menu:checked~.container-label>.cabecalho-menu-hamburger{
+  background-image: url("../img/MenuAberto.png");
+}
+
+.container-menu:checked~.container-label{
+  background: var(--azul-degrade);
+}
+
+@media screen and (min-width: 1024px) {
+  .container-titulo,
+  .titulo-negrito {
+    font-family: var(--fonte-secundaria);
+    font-size: 30px;
+  }
+
+  .container-titulo {
+    font-weight: 400;
+    display: block;
+    padding-right: 2em;
+  }
+
+  .titulo-negrito {
+    font-weight: 700;
+  }
+
+  .opcoes {
+    display: flex;
+    align-items: center;
+  }
+
+  .opcoes-item {
+    padding-left: 2em;
+    text-transform: uppercase;
+  }
+
+  .opcoes-link {
+    text-decoration: none;
+    color: var(--preto);
+  }
+
+  .container-img-transparent,
+  .cabecalho-menu-hamburger,
+  .opcoes-dropdown {
+    display: none;
+  }
+
+  .cabecalho {
+    padding: 0 4em;
+  }
+
+  .opcoes-dropdown:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+  }
+
+  .opcoes-dropdown:checked~.opcoes-label>.opcoes-menu{
+    background: var(--azul-degrade);
+  }
+  
+}
+
+@media screen and (min-width: 1728px) {
+  .sacola-texto,
+  .perfil-texto {
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--preto);
+    margin-right: 2em;
+  }
+}
